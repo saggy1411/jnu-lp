@@ -11308,3 +11308,131 @@ h3 em,
         max-width: 100% !important;
     }
 }
+
+/* =========================================================
+   GALLERY — MOBILE FIX
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .fashion-gallery-section {
+        padding: 80px 0 85px !important;
+        overflow: hidden !important;
+    }
+
+    .fashion-gallery-container {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+        margin: 0 auto !important;
+    }
+
+    /* Heading */
+    .fashion-gallery-heading {
+        margin-bottom: 42px !important;
+    }
+
+    .fashion-gallery-heading h2 {
+        white-space: normal !important;
+        font-size: clamp(44px, 11vw, 58px) !important;
+        line-height: .94 !important;
+    }
+
+    .fashion-gallery-heading h2 em {
+        display: block !important;
+    }
+
+    .fashion-gallery-heading p {
+        max-width: 100% !important;
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+    /* Carousel viewport */
+    .fashion-gallery-carousel {
+        width: 100% !important;
+        height: 430px !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .fashion-gallery-track {
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important;
+    }
+
+    /* All cards */
+    .fashion-gallery-card {
+        position: absolute !important;
+        width: 100% !important;
+        height: 400px !important;
+        left: 0 !important;
+        top: 0 !important;
+
+        margin: 0 !important;
+        border-radius: 24px !important;
+
+        transform: translateX(0) scale(.92) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Only active card visible */
+    .fashion-gallery-card.is-active {
+        transform: translateX(0) scale(1) !important;
+        opacity: 1 !important;
+        z-index: 5 !important;
+        pointer-events: auto !important;
+    }
+
+    /* Hide side cards on mobile */
+    .fashion-gallery-card.is-left,
+    .fashion-gallery-card.is-right,
+    .fashion-gallery-card.is-far-left,
+    .fashion-gallery-card.is-far-right {
+        transform: translateX(0) scale(.92) !important;
+        opacity: 0 !important;
+        z-index: 0 !important;
+    }
+
+    /* Image */
+    .fashion-gallery-card img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    /* Caption */
+    .fashion-gallery-card .fashion-gallery-caption {
+        position: absolute !important;
+        left: 22px !important;
+        right: 22px !important;
+        bottom: 20px !important;
+        z-index: 10 !important;
+    }
+
+    /* Controls */
+    .fashion-gallery-controls {
+        margin-top: 24px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 24px !important;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 52px !important;
+        height: 52px !important;
+        flex: 0 0 52px !important;
+    }
+
+    .fashion-gallery-dots {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 7px !important;
+    }
+
+}
