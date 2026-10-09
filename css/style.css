@@ -3642,3 +3642,30 @@ h3 em,
         animation: none !important;
     }
 }
+
+/* Video inside the Why Choose JNU artwork container only */
+.why-bento-section .fashion-art-animation {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #201626;
+}
+
+.why-bento-section .fashion-art-video {
+    position: absolute;
+    inset: 0;
+    width: 101%;
+    height: 124%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Keep the video behind the existing overlay and text */
+.why-bento-section .why-bento-feature .why-bento-overlay {
+    z-index: 1;
+}
+
+.why-bento-section .why-bento-feature .why-bento-content {
+    z-index: 2;
+}
