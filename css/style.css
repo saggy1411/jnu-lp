@@ -909,7 +909,7 @@ h3 em,
 
 .usp-stat strong {
     display: block;
-    color: #ce3925;
+    color: #ff0c78;
     font-family: var(--body-font);
     font-size: clamp(52px, 5vw, 82px);
     line-height: .9;
@@ -1131,9 +1131,9 @@ h3 em,
 
 .why-bento-content {
     position: absolute;
-    left: 30px;
+    left: 36px;
     right: 30px;
-    bottom: 45px;
+    bottom: 64px;
     color: #fff;
     z-index: 2;
 }
@@ -1194,8 +1194,8 @@ h3 em,
     font-size: clamp(20px, 1.65vw, 24px);
     line-height: 1.15;
     font-weight: 700;
-    color: var(--text);
-    margin-bottom: 10px;
+    color: #9d8888;
+    margin-bottom: 13px;
 }
 
 .why-bento-card p {
@@ -1286,7 +1286,7 @@ h3 em,
     .why-bento-content {
         left: 24px;
         right: 24px;
-        bottom: 30px;
+        bottom: 40px;
     }
 
     .why-bento-content h3 {
@@ -3547,7 +3547,7 @@ h3 em,
 }
 
 .why-bento-section .fashion-art-bottomline {
-    bottom: 8%;
+    bottom: 5%;
     padding-top: 14px;
     border-top: 1px solid rgba(255, 255, 255, .35);
     font-size: 8px;
@@ -3556,7 +3556,7 @@ h3 em,
 .why-bento-section .fashion-art-caption {
     position: absolute;
     z-index: 4;
-    top: 44%;
+    top: 38%;
     left: 9%;
     right: 6%;
     display: flex;
