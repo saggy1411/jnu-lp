@@ -3417,3 +3417,228 @@ h3 em,
 .box-three {
     background: #f7f7f5;
 }
+
+/* WHY CHOOSE JNU — ANIMATED FASHION ARTWORK */
+
+.why-bento-section .why-bento-feature {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #201626 !important;
+}
+
+.why-bento-section .fashion-art-animation {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 75% 20%, rgba(188, 112, 160, .35), transparent 42%),
+        radial-gradient(ellipse at 15% 75%, rgba(133, 99, 166, .4), transparent 45%),
+        linear-gradient(145deg, #f0e5eb, #80627f 65%, #302237);
+    color: white;
+}
+
+.why-bento-section .fashion-art-animation::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.why-bento-section .fashion-art-glow {
+    position: absolute;
+    width: 65%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: blur(38px);
+    opacity: .65;
+}
+
+.why-bento-section .fashion-art-glow-one {
+    top: 12%;
+    left: -15%;
+    background: #e8b9d4;
+    animation: fashionGlowOne 9s ease-in-out infinite alternate;
+}
+
+.why-bento-section .fashion-art-glow-two {
+    right: -18%;
+    bottom: 10%;
+    background: #a18ac7;
+    animation: fashionGlowTwo 11s ease-in-out infinite alternate;
+}
+
+.why-bento-section .fashion-art-number {
+    position: absolute;
+    top: 9%;
+    right: 7%;
+    color: rgba(255, 255, 255, .16);
+    font: clamp(130px, 19vw, 250px)/1 "Playfair Display", Georgia, serif;
+    animation: fashionNumberFloat 7s ease-in-out infinite;
+}
+
+.why-bento-section .fashion-art-orbit {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    width: 65%;
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scaleY(.56);
+}
+
+.why-bento-section .fashion-art-orbit-one {
+    animation: fashionOrbitOne 16s linear infinite;
+}
+
+.why-bento-section .fashion-art-orbit-two {
+    width: 83%;
+    border-color: rgba(255, 255, 255, .2);
+    animation: fashionOrbitTwo 22s linear infinite;
+}
+
+.why-bento-section .fashion-art-ribbon {
+    position: absolute;
+    left: -25%;
+    width: 150%;
+    height: 20%;
+    border: 1px solid rgba(255, 255, 255, .65);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.why-bento-section .fashion-art-ribbon-one {
+    top: 20%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .5), rgba(218, 157, 196, .4), transparent);
+    animation: fashionRibbonOne 8s ease-in-out infinite alternate;
+}
+
+.why-bento-section .fashion-art-ribbon-two {
+    top: 37%;
+    height: 25%;
+    background: linear-gradient(100deg, transparent, rgba(122, 70, 118, .65), rgba(238, 195, 218, .7), transparent);
+    animation: fashionRibbonTwo 10s ease-in-out infinite alternate;
+}
+
+.why-bento-section .fashion-art-ribbon-three {
+    top: 53%;
+    height: 17%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .28), rgba(108, 63, 116, .6), transparent);
+    animation: fashionRibbonThree 9s ease-in-out infinite alternate;
+}
+
+.why-bento-section .fashion-art-topline,
+.why-bento-section .fashion-art-bottomline {
+    position: absolute;
+    z-index: 4;
+    left: 9%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: rgba(255, 255, 255, .9);
+    font: 600 9px "DM Sans", Arial, sans-serif;
+    letter-spacing: .14em;
+}
+
+.why-bento-section .fashion-art-topline {
+    top: 8%;
+}
+
+.why-bento-section .fashion-art-bottomline {
+    bottom: 8%;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, .35);
+    font-size: 8px;
+}
+
+.why-bento-section .fashion-art-caption {
+    position: absolute;
+    z-index: 4;
+    top: 44%;
+    left: 9%;
+    right: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateY(-15%);
+}
+
+.why-bento-section .fashion-art-caption span {
+    margin-bottom: 7px;
+    font-size: 10px;
+    letter-spacing: .25em;
+}
+
+.why-bento-section .fashion-art-caption strong {
+    color: white;
+    font: 700 clamp(35px, 5vw, 62px)/.98 "DM Sans", Arial, sans-serif;
+    letter-spacing: -.065em;
+}
+
+.why-bento-section .fashion-art-caption .fashion-art-italic {
+    margin-top: 5px;
+    font: italic 400 clamp(30px, 4.5vw, 52px)/1 "Playfair Display", Georgia, serif;
+    letter-spacing: -.045em;
+}
+
+@keyframes fashionGlowOne {
+    to {
+        transform: translate(25%, 15%) scale(1.2);
+    }
+}
+
+@keyframes fashionGlowTwo {
+    to {
+        transform: translate(-20%, -15%) scale(1.25);
+    }
+}
+
+@keyframes fashionNumberFloat {
+    50% {
+        transform: translateY(-14px) rotate(3deg);
+    }
+}
+
+@keyframes fashionOrbitOne {
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes fashionOrbitTwo {
+    to {
+        rotate: -360deg;
+    }
+}
+
+@keyframes fashionRibbonOne {
+    to {
+        transform: translate(5%, 18px) rotate(-17deg);
+    }
+}
+
+@keyframes fashionRibbonTwo {
+    to {
+        transform: translate(-5%, -15px) rotate(-31deg);
+    }
+}
+
+@keyframes fashionRibbonThree {
+    to {
+        transform: translate(4%, -12px) rotate(-18deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .why-bento-section .fashion-art-caption strong {
+        font-size: clamp(34px, 10vw, 48px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .why-bento-section .fashion-art-animation * {
+        animation: none !important;
+    }
+}
