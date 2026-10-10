@@ -506,8 +506,8 @@ h3 em,
 
 .hero-eyebrow {
     display: inline-block;
-    margin-bottom: 17px;
-    font-size: 12px;
+    margin-bottom: 19px;
+    font-size: 34px;
     font-weight: 700;
     letter-spacing: .18em;
     color: rgba(255, 255, 255, .9);
@@ -974,7 +974,7 @@ h3 em,
     position: relative;
     width: 100%;
     min-height: 120px;
-    flex: 0 0 200px;
+    flex: 0 0 251px;
     overflow: hidden;
 }
 
@@ -1004,7 +1004,7 @@ h3 em,
 }
 
 .industry-logo-row .industry-logo-card {
-    flex: 0 0 180px;
+    flex: 0 0 221px;
     width: 180px;
     height: 190px;
     padding: 6px;
@@ -1015,7 +1015,7 @@ h3 em,
 .industry-logo-row .industry-logo-card img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 136%;
     object-fit: cover;
     border-radius: 14px;
 }
@@ -1056,7 +1056,7 @@ h3 em,
     }
 
     .industry-logo-row {
-        flex: 0 0 155px;
+        flex: 0 0 202px;
         min-height: 100px;
     }
 
@@ -1087,7 +1087,7 @@ h3 em,
 .why-bento-grid {
     display: grid;
     grid-template-columns: 1.25fr .75fr .75fr;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 333px 300px;
     gap: 16px;
     height: 616px;
     margin-top: 48px;
@@ -1153,20 +1153,20 @@ h3 em,
 .why-bento-light {
     grid-column: 2;
     grid-row: 1;
-    background: #f7f7f5;
+    background: #4869e5e8;
 }
 
 .why-bento-gradient {
     grid-column: 3;
     grid-row: 1;
-    background: linear-gradient(135deg, #f4edf5, #ffffff 55%, #f3dce9);
+    background: #ee3a9d;
 }
 
 .why-bento-wide {
     grid-column: 2;
     grid-row: 2;
     min-height: 300px;
-    background: #f5eeee;
+    background: #ee3a9d;
     color: #000000;
     display: flex;
     flex-direction: column;
@@ -1177,7 +1177,7 @@ h3 em,
     grid-column: 3;
     grid-row: 2;
     min-height: 300px;
-    background: #f2eff5;
+    background: #4869e5e8;
 }
 
 .bento-number {
@@ -1194,12 +1194,12 @@ h3 em,
     font-size: clamp(20px, 1.65vw, 24px);
     line-height: 1.15;
     font-weight: 700;
-    color: #9d8888;
+    color: #ffffff;
     margin-bottom: 13px;
 }
 
 .why-bento-card p {
-    color: #667085;
+    color: #ffffff;
     font-size: 13px;
     line-height: 1.65;
 }
@@ -1212,7 +1212,7 @@ h3 em,
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: .08em;
-    color: var(--navy);
+    color: #070707;
     margin-top: 14px;
 }
 
@@ -2556,6 +2556,10 @@ h3 em,
     z-index: 2;
 }
 
+.course-showcase-card:nth-child(3) {
+    z-index: 3;
+}
+
 .course-showcase-visual {
     position: relative;
     min-height: 570px;
@@ -2802,7 +2806,7 @@ h3 em,
     margin: 0 auto;
     padding: 38px 70px 52px;
     overflow: hidden;
-    background: #eddbed57;
+    background: linear-gradient(39deg, #142651 0%, #5b205e 48%, #c90059 100%);
     box-shadow: 0 28px 80px rgba(173, 119, 10, .14);
     border-radius: 32px;
     isolation: isolate;
@@ -2845,7 +2849,7 @@ h3 em,
 .final-cta-kicker {
     display: inline-block;
     margin-bottom: 22px;
-    color: #a36d00;
+    color: #f0f0ef;
     font-size: 8.5px;
     font-weight: 800;
     letter-spacing: .18em;
@@ -2855,7 +2859,7 @@ h3 em,
 .final-cta-copy h2 {
     max-width: 650px;
     margin: 0 0 28px;
-    color: #101010;
+    color: #f0ecec;
     font-family: var(--body-font);
     font-size: var(--section-heading-size);
     font-weight: var(--section-heading-weight);
@@ -3655,7 +3659,7 @@ h3 em,
     position: absolute;
     inset: 0;
     width: 101%;
-    height: 124%;
+    height: 108%;
     display: block;
     object-fit: cover;
     object-position: center;

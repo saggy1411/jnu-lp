@@ -138,111 +138,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("JNU Fashion Design landing page initialized.");
 });
+
 /* =========================================================
    COURSES — TRUE OVERLAP / STACK SCROLL
+   Supports all course cards, including Course 03
 ========================================================= */
 
-(function () {
+(() => {
+    const courseSection = document.querySelector(".courses-showcase");
+    const courseStack = document.querySelector(".courses-stack");
 
-    const courseSection =
-        document.querySelector(".courses-showcase");
+    if (!courseSection || !courseStack) return;
 
-    const courseCards =
-        document.querySelectorAll(".course-showcase-card");
+    const courseCards = Array.from(
+        courseStack.querySelectorAll(".course-showcase-card")
+    );
 
-    if (!courseSection || courseCards.length < 2) return;
-
-    const firstCard = courseCards[0];
-    const secondCard = courseCards[1];
+    if (courseCards.length < 2) return;
 
     function clamp(value, min, max) {
         return Math.min(Math.max(value, min), max);
     }
 
     function updateCourseStack() {
-
-        const firstRect =
-            firstCard.getBoundingClientRect();
-
-        const secondRect =
-            secondCard.getBoundingClientRect();
-
         const stickyTop =
-            window.innerWidth <= 600
-                ? 45
-                : window.innerWidth <= 900
-                    ? 55
-                    : 90;
+            window.innerWidth <= 600 ? 45 :
+                window.innerWidth <= 900 ? 55 : 90;
 
-        /*
-         * Animation begins when Course 02
-         * approaches the pinned position.
-         */
+        courseCards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
 
-        const animationDistance =
-            Math.max(firstRect.height * 0.55, 280);
+            const animationDistance = Math.max(
+                rect.height * 0.55,
+                280
+            );
 
-        const progress = clamp(
-            (
-                stickyTop +
-                animationDistance -
-                secondRect.top
-            ) / animationDistance,
-            0,
-            1
-        );
+            const progress = clamp(
+                (
+                    stickyTop +
+                    animationDistance -
+                    rect.top
+                ) / animationDistance,
+                0,
+                1
+            );
 
-        /*
-         * COURSE 01
-         * Slowly moves upward and becomes
-         * slightly smaller underneath.
-         */
+            // Each card gradually settles beneath the next card.
+            const scale = 1 - progress * 0.035;
+            const moveY = progress * -12;
+            const brightness = 1 - progress * 0.06;
 
-        const firstScale =
-            1 - (progress * 0.06);
+            card.style.transform =
+                `translateY(${moveY}px) scale(${scale})`;
 
-        const firstMove =
-            progress * -18;
+            card.style.filter =
+                `brightness(${brightness})`;
 
-        firstCard.style.transform =
-            `translateY(${firstMove}px) scale(${firstScale})`;
+            card.style.zIndex = String(index + 1);
 
-        firstCard.style.filter =
-            `brightness(${1 - progress * 0.08})`;
-
-        /*
-         * COURSE 02
-         * Slides over Course 01.
-         */
-
-        const secondMove =
-            Math.max(0, progress - 0.85) * -4;
-
-        secondCard.style.transform =
-            `translateY(${secondMove}px)`;
-
-        secondCard.style.opacity = "1";
+            if (index < courseCards.length - 1) {
+                card.style.opacity = String(1 - progress * 0.08);
+            } else {
+                card.style.opacity = "1";
+            }
+        });
     }
-
 
     let ticking = false;
 
-
     function requestCourseUpdate() {
-
         if (ticking) return;
 
         ticking = true;
 
         window.requestAnimationFrame(() => {
-
             updateCourseStack();
-
             ticking = false;
-
         });
     }
-
 
     window.addEventListener(
         "scroll",
@@ -250,16 +223,15 @@ document.addEventListener("DOMContentLoaded", () => {
         { passive: true }
     );
 
-
     window.addEventListener(
         "resize",
         requestCourseUpdate
     );
 
-
     updateCourseStack();
-
 })();
+
+
 /* =========================================================
    PLACEMENT — SCROLL IMAGE JOURNEY
 ========================================================= */
