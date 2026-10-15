@@ -1080,26 +1080,26 @@ h3 em,
    8. WHY CHOOSE JNU — BENTO GRID
    --------------------------------------------------------- */
 .why-jnu-section {
-    padding: 115px 0 120px;
+    /* padding: 115px 0 120px; */
     background: #ffffff;
 }
 
 .why-bento-grid {
     display: grid;
-    grid-template-columns: 1.25fr .75fr .75fr;
-    grid-template-rows: 333px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
     gap: 16px;
-    height: 616px;
+    height: 640px;
     margin-top: 48px;
 }
 
 .why-bento-card {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #dedfe2;
     padding: 28px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
+    height: 100%;
+    color: var(--navy);
     transition: transform .3s ease, box-shadow .3s ease;
 }
 
@@ -1165,35 +1165,30 @@ h3 em,
 .why-bento-wide {
     grid-column: 2;
     grid-row: 2;
-    min-height: 300px;
     background: #ee3a9d;
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .why-bento-small {
     grid-column: 3;
     grid-row: 2;
-    min-height: 300px;
     background: #4869e5e8;
 }
 
 .bento-number {
     display: block;
-    font-size: 32px;
-    font-weight: 800;
+    font-size: 35px;
+    font-weight: 400;
     letter-spacing: .08em;
     color: var(--navy);
     opacity: .35;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .why-bento-card h3 {
-    font-size: clamp(20px, 1.65vw, 24px);
-    line-height: 1.15;
-    font-weight: 700;
+    font-size: clamp(20px, 2.75vw, 30px);
+    line-height: 1;
+    letter-spacing: -2px;
+    font-weight: 600;
     color: #ffffff;
     margin-bottom: 13px;
 }
@@ -1202,28 +1197,7 @@ h3 em,
     color: #ffffff;
     font-size: 13px;
     line-height: 1.65;
-}
-
-.why-bento-wide a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: #070707;
-    margin-top: 14px;
-}
-
-.why-bento-wide a span {
-    color: #f02873;
-    font-size: 16px;
-    transition: transform .2s ease;
-}
-
-.why-bento-wide a:hover span {
-    transform: translateX(4px);
+    margin-bottom: 20px;
 }
 
 /* Tablet: 2-column balanced layout */
@@ -1235,6 +1209,7 @@ h3 em,
     .why-bento-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        grid-auto-rows: 1fr;
         gap: 16px;
         height: auto;
     }
@@ -1252,6 +1227,7 @@ h3 em,
         grid-column: span 1;
         grid-row: auto;
         min-height: 270px;
+        height: 100%;
     }
 }
 
@@ -1312,7 +1288,7 @@ h3 em,
 .recruiters-section {
     position: relative;
     overflow: hidden;
-    padding: 1px 0 105px;
+    padding: 18px 0 105px;
     background: #ffffff;
 }
 
@@ -2269,7 +2245,7 @@ h3 em,
 .admission-process-section {
     position: relative;
     overflow: hidden;
-    padding: 110px 0 90px;
+    /* padding: 110px 0 90px; */
     background:
         radial-gradient(circle at 8% 20%, rgb(255 255 255 / 96%), #ffffff 25%),
         radial-gradient(circle at 92% 80%, rgb(233 223 228 / 8%), #efeaea00 25%),
@@ -2428,6 +2404,15 @@ h3 em,
     background: rgba(16, 29, 70, .15);
 }
 
+.admission-apply-bento {
+    color: #fff !important;
+}
+
+.admission-apply-bento:hover {
+    color: #161616 !important;
+}
+
+
 @media (max-width: 991px) {
     .admission-process-section {
         padding: 90px 0 75px;
@@ -2528,7 +2513,7 @@ h3 em,
     width: calc(100% - 40px);
     max-width: 1360px;
     margin: 0 auto;
-    padding-bottom: 10vh;
+    /* padding-bottom: 10vh; */
     overflow: visible;
 }
 
@@ -3672,4 +3657,210 @@ h3 em,
 
 .why-bento-section .why-bento-feature .why-bento-content {
     z-index: 2;
+}
+
+/* =========================================================
+   WHY CHOOSE JNU — APPLY NOW BUTTONS
+========================================================= */
+
+.why-bento-card .why-bento-apply {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: fit-content;
+    margin-top: auto;
+    padding: 11px 18px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    color: inherit;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.why-bento-card .why-bento-apply span {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.why-bento-card .why-bento-apply:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #101d46;
+    transform: translateY(-2px);
+}
+
+.why-bento-card .why-bento-apply:hover span {
+    transform: translate(3px, -2px);
+}
+
+.why-bento-card .why-bento-apply:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .why-bento-card .why-bento-apply {
+        margin-top: auto;
+        padding: 10px 15px;
+        font-size: 10px;
+    }
+}
+
+/* =========================================================
+   JNU FASHION DESIGN — FOOTER
+========================================================= */
+
+.site-footer {
+    position: relative;
+    width: 100%;
+    margin-top: 36px;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+}
+
+.site-footer .footer-card {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 52px 24px 44px;
+    border-radius: 28px;
+    background: linear-gradient(
+        135deg,
+        #08163b 0%,
+        #1e0b3c 25%,
+        #520d4e 52%,
+        #910f52 80%,
+        #c61857 100%
+    );
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(8, 22, 59, 0.16);
+}
+
+.site-footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.site-footer .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.site-footer .footer-logo-img {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.site-footer .footer-disclaimer-text {
+    max-width: 860px;
+    margin: 0 auto 24px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.site-footer .footer-links-row {
+    margin-bottom: 12px;
+}
+
+.site-footer .footer-link {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.25s ease;
+}
+
+.site-footer .footer-link:hover {
+    color: #ffffff;
+    opacity: 0.82;
+    text-decoration: underline;
+}
+
+.site-footer .footer-copyright-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13.5px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+    .site-footer {
+        margin-top: 28px;
+        padding-bottom: 18px;
+    }
+
+    .site-footer .footer-card {
+        padding: 42px 22px 34px;
+        border-radius: 24px;
+    }
+
+    .site-footer .footer-logo-img {
+        width: 220px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+    .site-footer {
+        margin-top: 20px;
+        padding-bottom: 12px;
+    }
+
+    .site-footer .footer-card {
+        padding: 34px 18px 28px;
+        border-radius: 20px;
+    }
+
+    .site-footer .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .site-footer .footer-logo-img {
+        width: 190px;
+    }
+
+    .site-footer .footer-disclaimer-text {
+        margin-bottom: 20px;
+        font-size: 12.5px;
+        line-height: 1.7;
+    }
+
+    .site-footer .footer-link {
+        font-size: 13px;
+    }
+
+    .site-footer .footer-copyright-text {
+        font-size: 12px;
+    }
 }
